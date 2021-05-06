@@ -1,0 +1,240 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
+:root {
+    --bg-primary: #26537d;
+    --bg-secondary: #326da4;
+    --font-primary: #fff;
+    --font-size-primary: 1.5em;
+    font-family: 'Poppins', sans-serif;
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    background-color: var(--bg-primary);
+    color: var(--font-primary);
+}
+body::-webkit-scrollbar {
+    width: 1rem;
+}
+
+body::-webkit-scrollbar-track {
+    background: #1e1e24;
+}
+
+body::-webkit-scrollbar-thumb {
+    background: #fff;
+}
+
+.App {
+    margin-left: 5rem;
+    height: 100vh;
+}
+
+.hero-image-container {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+    border-bottom-style: solid;
+    border-width: 2px;
+}
+
+.navbar {
+    display: flex;
+    position: fixed;
+    transition: width 400ms ease;
+    background-color: var(--bg-secondary);
+}
+
+.navbar-nav {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+
+.nav-item {
+    width: 100%;
+}
+
+.nav-link {
+    display: flex;
+    align-items: center;
+    height: 5rem;
+    text-decoration: none;
+    transition: 600ms;
+}
+
+.link-text {
+    display: none;
+    margin-left: 1rem;
+    color: var(--font-primary);
+}
+
+.nav-link svg {
+    width: 2rem;
+    min-width: 2rem;
+    margin: 0 1.5rem;
+    color: var(--font-primary);
+}
+
+.nav-link:hover {
+    background: var(--bg-primary);
+}
+
+@keyframes feature-art-slider {
+    from {
+        transform: translateY(-100%);
+    }
+    25% {
+        transform: translateY(-75%);
+    }
+    to {
+        transform: translateY(0%);
+    }
+}
+
+.feature-art-image-class {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    animation: feature-art-slider 500ms;
+    grid-area: feature-art;
+}
+
+.Description {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    grid-area: text;
+    text-align: left;
+    border-bottom-style: solid;
+    border-width: 2px;
+}
+
+.text-component {
+    line-height: 1.8;
+    font-size: var(--font-size-primary);
+    display: block;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    width: 50%;
+}
+
+.Photos {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-bottom-style: solid;
+    border-width: 2px;
+}
+
+#Photos {
+    margin-bottom: 5rem;
+}
+
+.gallery-art-image {
+    box-shadow: 0px 0px 2px 2px black;
+    width: 50%;
+    height: 50%;
+}
+
+.Feedback {
+    display: flex;
+    justify-content: center;
+    min-height: 100vh;
+    border: 0;
+}
+
+.Feedback > iframe {
+  width: 100%;
+}
+
+/* Small screens */
+@media only screen and (max-width: 600px) {
+    .App {
+        margin-left: 0rem;
+        height: 100vh;
+    }
+
+    .navbar {
+        top: 0;
+        width: 100vw;
+        height: 5rem;
+    }
+
+    .navbar-nav {
+        flex-direction: row;
+    }
+
+    .nav-link {
+        justify-content: center;
+    }
+
+    body {
+        margin: 0;
+    }
+
+    .feature-art-image {
+        width: 100%;
+        height: auto;
+    }
+
+    .google-play-icon {
+        width: 50%;
+        max-width: 512px;
+    }
+
+    .Photos {
+        flex-direction: column;
+    }
+
+    .gallery-art-image {
+        margin-bottom: 1rem;
+    }
+    .text-component {
+        width: 100%;
+    }
+}
+
+/* Large screens */
+@media only screen and (min-width: 600px) {
+    .navbar {
+        top: 0;
+        width: 5rem;
+        height: 100vh;
+    }
+
+    .navbar:hover {
+        width: 16rem;
+    }
+
+    .navbar:hover .link-text {
+        display: inline;
+    }
+
+    .navbar:hover .link-text {
+        display: block;
+    }
+
+    .feature-art-image {
+        width: 50%;
+        height: auto;
+    }
+    .google-play-icon {
+        width: 50%;
+        max-width: 512px;
+    }
+    .Photos {
+        flex-direction: row;
+    }
+}
