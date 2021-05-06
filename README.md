@@ -2,7 +2,7 @@
 
 This project is used as a homepage for my Google Play app Jalgratta Liiklustestid https://play.google.com/store/apps/details?id=com.gksoftware.jalgrattatestid
 
-## Made in React 
+## Made with React 
 
 ## Hosted with firebase
 
